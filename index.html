@@ -3,21 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>68070072</title>
     <link rel ="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <p>68070072</p>
-        <h2>ITF Website</h2>
-        <h2>Week 14</h2>
-    </nav>
-    <div class ="container">
-        <h2 id="mytitle">Welcome to my ITF Website</h2>
-        <img src ="banknote.png" width="96" alt ="Bank" />
+    <div class="back">
+        <nav>
+            <p id ="nav-color">68070072</p>
+            <h2 id = "nav-color">ITF Website</h2>
+            <p id = "nav-color">Week 14</p>
+        </nav>
+        <div class ="container">
+            <h2 id="mytitle">Welcome to my ITF Website</h2>
+            <img style="margin-left: 10px;" src ="computer-cat.gif" width="350" alt ="car-coding" />
+            <br>
+            <textarea  style="margin-left: 10px;margin-bottom: 10px;margin-top: 10px;" name="text" id="text"></textarea>
+        </div>
+        <script src="script.js"></script>
+        <div class ="container2">
+            <div class ="left">
+                <h1>Account Overview</h1>
+                <div class ="account">
+                    <img style="margin-left: 10px;" src="7008.jpg" width="100" alt="Profile" />
+                    <div>
+                        <h2 style="margin-top: 0px;margin-bottom: 0px;margin-left: 10px;">Account Infomation</h2>
+                        <label style="margin-left: 10px;">Name: Theerawat Russamevikai</label>
+                        <br>
+                        <label style="margin-left: 10px;">Type: Student KMITL</label>
+                    </div>
+                </div>
+                
+                <div class ="balance-infomation">
+                    <img style="margin-left: 10px;" width="100" src="istockphoto-1224254307-612x612.jpg" alt="balance Infomation" />
+                    <div>
+                        <h2 style="margin-top: 25px;margin-left: 10px;margin-bottom: 0px;">Balance Infomation</h2>
+                        <label style="margin-left: 10px;" for="number">Account Balance:</label>
+                        <input style="margin-left: 10px;" type="number" id = "myinput" value="0">
+                        <br>
+                        <label style="margin-left: 10px;" for="number">Cash Balance:</label>
+                        <input type="number" id = "cash-balance" value="0">
+                        <button onclick="add()">Change</button>
+                    </div>
+                </div>
+                
+                <div class="bank">
+                    <img style="margin-left: 10px;" width="100"src="bank.jpg" alt="bank">
+                    <div>
+                        <h2 style="margin-top: 25px;margin-left: 10px;margin-bottom: 0px;">Bank Operation</h2>
+                        <select style="margin-left: 10px;" id="bank-ope" name="bank-ope">
+                            <option value="Deposit">Deposit</option>
+                            <option value="Withdraw">Withdraw</option>
+                        </select>
+                        <input style="margin-left: 10px;" type="number" value="0">
+                        <br>
+                        <button style="margin-left: 10px;" onclick="proceed()">proceed</button>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <h1>Financial Tools</h1>
+                <div class="currency">
+                    <div class="account">
+                        <img width="100" src="chococoin.jpg" alt="coin">
+                        <div>
+                            <h2 style="margin-top: 25px;margin-left: 10px;margin-bottom: 0px;">Currency Converter</h2>
+                            <label style="margin-left: 10px;">Input balance:</label>
+                            <input type="number" value="0">
+                            <br>
+                            <label style="margin-left: 10px;">Output balance:</label>
+                            <input type="number" value="0">
+                            <br>
+                            <select style="margin-left: 10px;" name="currency-ex" id="currency-ex">
+                                <option value="USD">USD</option>
+                                <option value="THB">THB</option>
+                            </select>
+                            <button onclick="convert()">Convert</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
     </div>
-    Enter number: <input type="number" id = "myinput" value="0">
-    <button onclick="add()">+1</button>
-    <script src="script.js"></script>
 </body>
 </html>
