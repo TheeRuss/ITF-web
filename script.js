@@ -1,7 +1,8 @@
-const myinput = document.getElementById("myinput")
-
+const Cash = document.getElementById("cashbalance")
+let current_value = 0
 function add() {
-    myinput.value = Number(myinput.value) + 1
+    current_value++;
+    cashbalance.value = current_value;
 }
 
 function proceed() {
