@@ -17,9 +17,8 @@
             <h2 id="mytitle">Welcome to my ITF Website</h2>
             <img style="margin-left: 10px;" src ="computer-cat.gif" width="350" alt ="car-coding" />
             <br>
-            <textarea  style="margin-left: 10px;margin-bottom: 10px;margin-top: 10px;" name="text" id="text"></textarea>
+            <textarea readonly style="margin-left: 10px;margin-bottom: 10px;margin-top: 10px;" name="text" id="text"></textarea>
         </div>
-        <script src="script.js"></script>
         <div class ="container2">
             <div class ="left">
                 <h1>Account Overview</h1>
@@ -38,11 +37,11 @@
                     <div>
                         <h2 style="margin-top: 25px;margin-left: 10px;margin-bottom: 0px;">Balance Infomation</h2>
                         <label style="margin-left: 10px;" for="number">Account Balance:</label>
-                        <input style="margin-left: 10px;" type="number" id = "myinput" value="0">
+                        <input style="margin-left: 10px;" type="number" id = "accountbalance">
                         <br>
                         <label style="margin-left: 10px;" for="number">Cash Balance:</label>
-                        <input type="number" id = "cashbalance" value="0">
-                        <button onclick="add()">Change</button>
+                        <input style="margin-left: 10px;" type="number" id = "cashbalance">
+                        <button onclick="change()">Change</button>
                     </div>
                 </div>
                 
@@ -54,7 +53,7 @@
                             <option value="Deposit">Deposit</option>
                             <option value="Withdraw">Withdraw</option>
                         </select>
-                        <input style="margin-left: 10px;" type="number" value="0">
+                        <input style="margin-left: 10px;" type="number" id="bankope">
                         <br>
                         <button style="margin-left: 10px;" onclick="proceed()">proceed</button>
                     </div>
@@ -83,7 +82,8 @@
                 </div>
             </div>
         </div>
-        </div>
     </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
