@@ -20,20 +20,26 @@ function proceed() {
     inout = parseInt(choice.value)
     ope1 = parseInt(operation.value)
     if (operation.value == "Deposit") {
+        if (cash_b - inout < 0) {
+            txt.prepend("Couldn't Deposit entered balance (Insufficient account balace)\n")
+            return
+        }
+        else {
         account_b += inout
         cash_b -= inout
+        }
     }
-    else {
+    if (operation.value == "Withdraw"){
+        if (account_b - inout < 0) {
+            txt.prepend("Couldn't Withdraw (Insufficient account balace)\n")
+            return
+        }
+        else {
         account_b -= inout
         cash_b += inout
+        }
     }
-    if (account_b < 0) {
-        txt.prepend("Couldn't Withdraw (Insufficient account balace)\n")
-    }
-    if (cash_b < 0) {
-        txt.prepend("Couldn't Deposit entered balance (Insufficient account balace)\n")
-    }
-    else {
+    if (account_b >= 0 || cash_b >= 0) {
         txt.prepend(`Current account balance: ${parseInt(account_b)}, Current cash balance: ${cash_b}\n`)
     }
 }
